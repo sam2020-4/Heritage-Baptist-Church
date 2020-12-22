@@ -8,3 +8,4 @@ def index(request):
     return render(request, 'church/index.html',{'title': 'Home'})
 def contact(request):
     return render(request, 'church/contact.html',{'title': 'contact'})
+    
