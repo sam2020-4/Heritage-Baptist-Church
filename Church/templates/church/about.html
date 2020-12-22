@@ -14,21 +14,43 @@
           <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white">
-                <h1 class="mb-3">Heading</h1>
-                <h4 class="mb-3">Subheading</h4>
-                <a class="btn btn-outline-light btn-lg" href="#!" role="button"
-                  >Call to action</a
-                >
+                <h1 class="mb-3">About Us</h1>
               </div>
             </div>
           </div>
         </div>
         <!-- Background image -->
         
-<div class="container">
-    <h1>Welcome to heritage church</h1>
-    <p>come one come all</p>
+<div class="container text-center pt-3  ">
+    <div class="jumbotron">
+        <h2>About Us</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia distinctio hic ullam exercitationem, architecto, quasi id quis soluta error temporibus nesciunt, fuga beatae sunt. Sint nobis dolorum doloribus labore officiis rem illo unde laudantium sit, est quibusdam possimus dolor illum dolores nemo natus adipisci aperiam beatae. Praesentium porro ex magni necessitatibus possimus nam quas, sapiente eveniet provident, laboriosam animi fugiat aut itaque corrupti, voluptatem ratione atque laborum iure! Facilis qui enim non eligendi ad natus vero, illo id iure hic maxime totam odit quod quas minus exercitationem, harum modi ipsa possimus tempore itaque iste ex! Voluptatum minus repellat quos iste.</p>
+
+    </div>
+    <!-- About us -->
+
+    <!-- Leaders && pastors Team -->
+    <h2>Leaders / Pastors </h2>
+    <div class="row">
+
+      <!-- first col -->
+      {% for team in teams %}
+      <div class="col-md-4 pt-4">
+        <div class="card">
+          <img src="{{ team.image.url }}" class="card-img-top" alt="..."/>
+          <div class="card-body">
+            <h5 class="card-title">{{team.title}}</h5>
+            <p class="card-text">
+              {{team.name}}
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
 </div>
+
 
 {% endblock content %}
    
