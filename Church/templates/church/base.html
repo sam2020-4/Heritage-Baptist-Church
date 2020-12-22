@@ -57,22 +57,92 @@
             >
               <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarExample01">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item active">
-                  <a class="nav-link" aria-current="page" href="#">Home</a>
-                </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- Left -->
+              <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
+                  <a routerLink="about" class="nav-link waves-effect">
+                    <i style="color: #03E9F4;"></i>
+                    <span class="clearfix d-none d-sm-inline-block" style="color: #03E9F4;" > Home </span>
+                  </a>
                 </li>
+      
+                <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4;" class="btn-group" mdbDropdown>
+                  <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About
+                    </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" routerLink="teen">About us</a>
+                    <a class="dropdown-item" routerLink="youth">Our Team</a>
+                    <a class="dropdown-item" routerLink="college">Projects</a>
+                  </div>
+                </div>
+                
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link waves-effect" href="#" target="_blank"></a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                <li>
+                  <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4;" class="btn-group" mdbDropdown>
+                    <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Ministries
+                      </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" routerLink="beginers">Children Ministry</a>
+                      <a class="dropdown-item" routerLink="primary">Youth Ministry</a>
+                      <a class="dropdown-item" routerLink="junior">Heritage Junior School</a>
+                    </div>
+                  </div>
+                  </li>
+      
+                  <li>
+                    <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4;" class="btn-group" mdbDropdown>
+                      <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Missions
+                        </a>
+                    
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" routerLink="teen">Mission Team</a>
+                        <a class="dropdown-item" routerLink="youth">Missionaries</a>
+                        <a class="dropdown-item" routerLink="college">Projects</a>
+                      </div>
+                    </div>
+                    </li>
+      
+                    <li>
+                      <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4;" class="btn-group" mdbDropdown>
+                        <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Events
+                          </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" routerLink="mission">Mission Trips</a>
+                          <a class="dropdown-item" routerLink="activities">Family Day</a>
+                          <a class="dropdown-item" routerLink="support">Anniversaries</a>
+                        </div>
+                      </div>
                 </li>
-              </ul>
-            </div>
+                <li>
+                  <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4;" >
+                    <!-- <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+                      Contact Us
+                      </a>                 
+  
+                  </div>
+                </li>
+                <li>
+                  <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4;" >
+                    <!-- <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+                      Give
+                      </a>                 
+  
+                  </div>
+                </li>
+               
+              </ul>       
+            
+          </div>
           </div>
         </nav>
         <!-- Navbar -->
