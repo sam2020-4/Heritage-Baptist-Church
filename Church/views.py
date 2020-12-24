@@ -9,3 +9,6 @@ def index(request):
   
 def contact(request):
     return render(request, 'church/contact.html',{'title': 'contact'})
+
+def give(request):
+    return render(request, 'church/give.html',{'title': 'give'})
