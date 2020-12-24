@@ -8,6 +8,7 @@ urlpatterns = [
     path('',views.about, name='about'),
     path('index',views.index, name='home'),
     path('contact/',views.contact, name='contact'), 
+    path('give/',views.give, name='give'), 
 ]
 
 if settings.DEBUG:urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
