@@ -9,11 +9,12 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-import os
-import cloudinary
+
 import cloudinary.uploader
 import cloudinary.api
 from pathlib import Path
+import os
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'l%01j#95l3u59^5+7i&2g&5xgrhu7zi_h&32ht7j!v0tdj4d3s'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -83,10 +84,21 @@ WSGI_APPLICATION = 'Heritage.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'USER': os.environ.get('DB_USER'),
+        'HOST': os.environ.get('DB_HOST', '127.0.0.1'),
+        'PORT': os.environ.get('DB_PORT', 5432),
     }
 }
 
@@ -142,3 +154,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # handling all media files formatt
 MEDIA_URL = '/collections/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'collections')
+
+cloudinary.config(
+  cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME'),  
+  api_key = os.environ.get('CLOUDINARY_API_KEY'),  
+  api_secret = os.environ.get('CLOUDINARY_API_SECRET')  
+)
