@@ -6,3 +6,6 @@ body{
     background-color: blueviolet;
 }
 
+.topnav a:hover {
+    border-bottom: 3px solid red;
+}
