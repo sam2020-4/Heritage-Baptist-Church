@@ -1,115 +1,80 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light text-white">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item"><a class="nav-link text-dark" href="#">Email: heritage@gmail.com</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="#">Call Us: 070000000000</a></li>
+  </ul>
+  <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+      <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-facebook" style="color:  #1877f2;"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-instagram" style="color:  #1877f2;"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-youtube" style="color:  #ff0000;"></i></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"> Admin Login</a></li>
+  </ul>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-dark">
+      <a class="navbar-brand text-white" href="#">Heritage <span style="font-style: italic; color:#03E9F4;">Church</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light text-white">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#">Email: heritage@gmail.com</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Call Us: 070000000000</a></li>
-        </ul>
-        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-facebook"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-instagram"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-youtube"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"> Admin Login</a></li>
-        </ul>
-    </nav>
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
-          <div class="container-fluid">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-mdb-toggle="collapse"
-              data-mdb-target="#navbarExample01"
-              aria-controls="navbarExample01"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <!-- Left -->
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link waves-effect" href="/">
-                    <i style="color: #03E9F4;"></i>
-                    <span class="clearfix d-none d-sm-inline-block" style="color: #03E9F4; cursor: pointer;" > Home </span>
-                  </a>
-                </li>
-
-                <li>
-                    <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4; cursor: pointer;" > 
-                        <a style="color:#03E9F4;" href="{% url 'about' %}">
-                            About Us
-                        </a>                 
-                    </div>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link waves-effect" href="#" target="_blank"></a>
-                </li>
-                <li>
-                  <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4; cursor: pointer;" class="btn-group" mdbDropdown>
-                    <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto topnav">
+              <li class="nav-item active">
+                  <a class="nav-link" style="color: #03E9F4;" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" style="color: #03E9F4;" href="{% url 'about' %}">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" style="color: #03E9F4;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Ministries
-                    </a>
-                  
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="{% url 'children' %}">Children Ministry</a>
+                      <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="{% url 'youth' %}">Youth Ministry</a>
-                      <a class="dropdown-item" routerLink="junior">Heritage Junior School</a>
-                    </div>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Heritage Junior School</a>
                   </div>
-                </li>
-      
-                  <li>
-                    <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4; cursor: pointer;" class="btn-group" mdbDropdown>
-                      <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Missions
-                        </a>
-                    
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" routerLink="teen">Mission Team</a>
-                        <a class="dropdown-item" routerLink="youth">Missionaries</a>
-                        <a class="dropdown-item" routerLink="college">Projects</a>
-                      </div>
-                    </div>
-                    </li>
-      
-                    <li>
-                      <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4; cursor: pointer;" class="btn-group" mdbDropdown>
-                        <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Events
-                          </a>
-                      
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" routerLink="mission">Mission Trips</a>
-                          <a class="dropdown-item" routerLink="activities">Family Day</a>
-                          <a class="dropdown-item" routerLink="support">Anniversaries</a>
-                        </div>
-                      </div>
-                </li>
-                <li>
-                  <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4; cursor: pointer;" >
-                      
-                    <a style="color:#03E9F4;" href="{% url 'contact' %}">
-                        Contact Us
-                      </a>                 
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #03E9F4;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Mission
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Mission Team</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Missionaries</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Projects</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="color: #03E9F4;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Events
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Mission Trips</a>
+                  <div class="dropdown-divider"></div>  
+                  <a class="dropdown-item" href="#">Family Day</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Anniversaries</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #03E9F4;" href="{% url 'contact' %}">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: #03E9F4;" href="{% url 'give' %}">Give</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pl-5 ml-5" style="color: #03E9F4;" href="{% url 'give' %}">Admin Login</a>
+          </li>
+          </ul>
+      </div>
+  </nav>
   
-                  </div>
-                </li>
-                <li>
-                  <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4; cursor: pointer;" >
-                    <a style="color:#03E9F4;" href="{% url 'give' %}">
-                      Give
-                      </a>                 
   
-                  </div>
-                </li>
-               
-              </ul>       
-            
-          </div>
-          </div>
-        </nav>
-        <!-- Navbar -->
-      </header>
+
+
+
+
