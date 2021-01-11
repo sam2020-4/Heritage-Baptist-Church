@@ -3,53 +3,120 @@
 
 {% block content %}
 
-        <!-- Background image -->
-        <div
-          class="p-5 text-center bg-image"
-          style="
-            background-image: url('https://mdbootstrap.com/img/new/slides/041.jpg');
-            height: 400px;
-          "
-        >
-          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
-            <div class="d-flex justify-content-center align-items-center h-100">
-              <div class="text-white">
-                <h1 class="mb-3">Welcome to Heritage Baptist Church</h1>
-                <h4 class="mb-3">A community that is passionate in worshiping God <br> and worshiping God through missions</h4>
-                <a class="btn btn-outline-light btn-lg" href="" role="button"
-                  >Visit our Youtube channel</a
-                >
-              </div>
-            </div>
+  <!-- Background image -->
+  <div class="p-5 text-center bg-image"style=" background-image: url('https://mdbootstrap.com/img/new/slides/041.jpg'); height: 400px;">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Welcome to Heritage Baptist Church</h1>
+          <h4 class="mb-3">A community that is passionate in worshiping God <br> and worshiping God through missions</h4>
+          <a class="btn btn-outline-light btn-lg" href="" role="button"
+            >Visit our Youtube channel</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Background image -->
+
+  <!-- word from pastor -->
+  <div class="container pt-4">
+      <h1 class="mb-3 text-center">Word from Pastor</h1>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="https://mdbootstrap.com/img/new/slides/041.jpg" width="100%" height="150vh" alt="">
+        </div>
+        <div class="col-md-9">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel fermentum nisl. Suspendisse iaculis, orci et consectetur bibendum, nunc ante tempus nibh, in laoreet leo lectus et justo. Vivamus rutrum tristique est, non pellentesque neque euismod ac. Sed in feugiat ex, ac accumsan sapien. Vestibulum sollicitudin velit sed orci tempus auctor eu id eros. Nullam rhoncus mauris a urna vulputate, ac mollis nulla sagittis. Mauris lobortis, justo vitae venenatis ullamcorper, sapien risus faucibus quam, nec vehicula eros felis ac augue. Suspendisse facilisis, purus commodo bibendum aliquam, nunc magna tincidunt diam, sit amet varius nisi diam ac urna. Praesent vel feugiat odio.</p>
+        </div> 
+      </div>
+  </div>
+
+  <!-- latest sermon -->
+  <div class="container">
+    <h1 class="mb-3 text-center">Latest Sermons</h1>
+    <p class="text-center">Loaded with fast-paced worship, activities, and video teachings to address real issues that <br> christians face each day</p>
+
+    <div class="row">
+      <!-- first col -->
+      {% for sermon in sermons %}
+        <div class="col-md-4">
+          <div class="card-body">
+            <img width="100%" src="{{ sermon.image.url }} " alt="">
+            <h5 class="pt-3">{{ sermon.title }}</h5>
+            <hr>
+            <p><i class="fa fa-user-circle"></i> Sermon From: <span>{{ sermon.sermon_from }}</span></p>
+            <p><i class="fa fa-clock"></i> Date Posted ~ {{ sermon.date }}</p>
+            <a href="#" target="_blank" class="btn btn-sm btn-info">Watch On Youtube</a>
           </div>
         </div>
-        <!-- Background image -->
-        
-<!-- <div class="container">
-    <col-md-6>
-</col-md-6>
-    <div><h1>Word from Pastor</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel fermentum nisl. Suspendisse iaculis, orci et consectetur bibendum, nunc ante tempus nibh, in laoreet leo lectus et justo. Vivamus rutrum tristique est, non pellentesque neque euismod ac. Sed in feugiat ex, ac accumsan sapien. Vestibulum sollicitudin velit sed orci tempus auctor eu id eros. Nullam rhoncus mauris a urna vulputate, ac mollis nulla sagittis. Mauris lobortis, justo vitae venenatis ullamcorper, sapien risus faucibus quam, nec vehicula eros felis ac augue. Suspendisse facilisis, purus commodo bibendum aliquam, nunc magna tincidunt diam, sit amet varius nisi diam ac urna. Praesent vel feugiat odio.</p>
+      {% endfor %}
     </div>
-    <div>
-        <img src="https://mdbootstrap.com/img/new/slides/041.jpg" alt="">
-    </div> -->
-    <div class="container pt-4">
-        <h1 class="mb-3 text-center">Word from Pastor</h1>
-        <div class="row">
-          <div class="col-md-3">
-            <img src="https://mdbootstrap.com/img/new/slides/041.jpg" width="100%" height="150vh" alt="">
-
-          </div>
-          <div class="col-md-9">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel fermentum nisl. Suspendisse iaculis, orci et consectetur bibendum, nunc ante tempus nibh, in laoreet leo lectus et justo. Vivamus rutrum tristique est, non pellentesque neque euismod ac. Sed in feugiat ex, ac accumsan sapien. Vestibulum sollicitudin velit sed orci tempus auctor eu id eros. Nullam rhoncus mauris a urna vulputate, ac mollis nulla sagittis. Mauris lobortis, justo vitae venenatis ullamcorper, sapien risus faucibus quam, nec vehicula eros felis ac augue. Suspendisse facilisis, purus commodo bibendum aliquam, nunc magna tincidunt diam, sit amet varius nisi diam ac urna. Praesent vel feugiat odio.</p>
-
-          </div>
-           
+  </div>
 
 
-    
+<!-- Footer -->
+<footer class="page-footer text-white font-small unique-color-dark pt-1" style="background-color: rgb(78, 74, 74);">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-6">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-5 col-lg-5 col-xl-5  mx-auto mb-1">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold text-white">Heritage Baptism Church</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet porttitor elit, quis gravida neque. .</p>
+
+      </div>
+       
+      <!-- Grid column -->
+      <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-md-0 mb-2">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold text-white">Location</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> Along Langata Southern Bypass</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i>P.o Box 900 - 00100, Nairoobi - Kenya</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> sample@gmail.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 254 700 000 000</p>          
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold text-white">Follow us</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+              <i class="fab fa-twitter mr-3"></i>Twitter</p>
+          <p>
+              <i class="fab fa-facebook mr-3"></i>Facebook</p>
+          <p>
+              <i class="fab fa-youtube mr-3"></i>Youtube</p>                
+        </div>
+        <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->  
+</footer>
+<!-- footer -->
+<div class="container-fluid"  style="background-color: rgb(116, 90, 90);">   
+  <footer class="page-footer font-small downfoo">
+      <div class="footer-copyright text-center  py-3">© 2020 Copyright | <a href="#" class="text-white">Heritage Baptism Church |  Terms & conditions | Privacy Policy</a>
+      </div>
+  </footer>
 </div>
-
 {% endblock content %}
    
