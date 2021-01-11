@@ -1,4 +1,3 @@
-{% load bootstrap4 %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -29,133 +28,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-
-  
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light text-white">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#">Email: heritage@gmail.com</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Call Us: 070000000000</a></li>
-        </ul>
-        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-facebook"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-instagram"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-youtube"></i></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"> Admin Login</a></li>
-        </ul>
-    </nav>
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
-          <div class="container-fluid">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-mdb-toggle="collapse"
-              data-mdb-target="#navbarExample01"
-              aria-controls="navbarExample01"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <!-- Left -->
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a routerLink="about" class="nav-link waves-effect">
-                    <i style="color: #03E9F4;"></i>
-                    <span class="clearfix d-none d-sm-inline-block" style="color: #03E9F4;" > Home </span>
-                  </a>
-                </li>
-      
-                <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4;" class="btn-group" mdbDropdown>
-                  <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    About
-                    </a>
-                
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" routerLink="teen">About us</a>
-                    <a class="dropdown-item" routerLink="youth">Our Team</a>
-                    <a class="dropdown-item" routerLink="college">Projects</a>
-                  </div>
-                </div>
-                
-                <li class="nav-item">
-                  <a class="nav-link waves-effect" href="#" target="_blank"></a>
-                </li>
-                <li>
-                  <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4;" class="btn-group" mdbDropdown>
-                    <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Ministries
-                      </a>
-                  
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" routerLink="beginers">Children Ministry</a>
-                      <a class="dropdown-item" routerLink="primary">Youth Ministry</a>
-                      <a class="dropdown-item" routerLink="junior">Heritage Junior School</a>
-                    </div>
-                  </div>
-                  </li>
-      
-                  <li>
-                    <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4;" class="btn-group" mdbDropdown>
-                      <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Missions
-                        </a>
-                    
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" routerLink="teen">Mission Team</a>
-                        <a class="dropdown-item" routerLink="youth">Missionaries</a>
-                        <a class="dropdown-item" routerLink="college">Projects</a>
-                      </div>
-                    </div>
-                    </li>
-      
-                    <li>
-                      <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4;" class="btn-group" mdbDropdown>
-                        <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Events
-                          </a>
-                      
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" routerLink="mission">Mission Trips</a>
-                          <a class="dropdown-item" routerLink="activities">Family Day</a>
-                          <a class="dropdown-item" routerLink="support">Anniversaries</a>
-                        </div>
-                      </div>
-                </li>
-                <li>
-                  <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4;" >
-                    <!-- <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
-                      Contact Us
-                      </a>                 
-  
-                  </div>
-                </li>
-                <li>
-                  <div style="padding-top: 8px; padding-right: 15px; color:#03E9F4;" >
-                    <!-- <a  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
-                      Give
-                      </a>                 
-  
-                  </div>
-                </li>
-               
-              </ul>       
-            
-          </div>
-          </div>
-        </nav>
-        <!-- Navbar -->
-      </header>
-    {% block content %}    
+
+  {% include 'church/navbar.html' %}
+
+  {% block content %}    
  
- 
-    {% endblock content %}
+  {% endblock content %}
       
     <!-- MDB -->
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/2.2.1/mdb.min.js"></script>   
        
 </body>

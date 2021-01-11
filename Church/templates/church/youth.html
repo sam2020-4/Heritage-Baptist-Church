@@ -3,49 +3,38 @@
 
 {% block content %}
 
-        <!-- Background image -->
-        <div
-          class="p-5 text-center bg-image"
-          style="background-image: url('https://mdbootstrap.com/img/new/slides/041.jpg'); height: 400px;">
-          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
-            <div class="d-flex justify-content-center align-items-center h-100">
-              <div class="text-white">
-                <h1 class="mb-3">About Us</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Background image -->
-        
-<div class="container text-center pt-3  ">
-    <div class="jumbotron">
-        <h2>About Us</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia distinctio hic ullam exercitationem, architecto, quasi id quis soluta error temporibus nesciunt, fuga beatae sunt. Sint nobis dolorum doloribus labore officiis rem illo unde laudantium sit, est quibusdam possimus dolor illum dolores nemo natus adipisci aperiam beatae. Praesentium porro ex magni necessitatibus possimus nam quas, sapiente eveniet provident, laboriosam animi fugiat aut itaque corrupti, voluptatem ratione atque laborum iure! Facilis qui enim non eligendi ad natus vero, illo id iure hic maxime totam odit quod quas minus exercitationem, harum modi ipsa possimus tempore itaque iste ex! Voluptatum minus repellat quos iste.</p>
-
-    </div>
-    <!-- About us -->
-
-    <!-- Leaders && pastors Team -->
-    <h2>Leaders / Pastors </h2>
-    <div class="row">
-
-      <!-- first col -->
-      {% for team in teams %}
-      <div class="col-md-4 pt-4 mb-3">
-        <div class="card">
-          <img src="{{ team.image.url }}" class="card-img-top" alt="..."/>
-          <div class="card-body">
-            <h5 class="card-title">{{team.title}}</h5>
-            <p class="card-text">
-              {{team.name}}
-            </p>
-          </div>
+  <!-- Background image -->
+  <div class="p-5 text-center bg-image"style=" background-image: url('https://mdbootstrap.com/img/new/slides/041.jpg'); height: 400px;">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Youth Ministry </h1>
         </div>
       </div>
-      {% endfor %}
-
     </div>
-</div>
+  </div>
+  <!-- Background image -->
+
+  <div class="container pt-3">
+      <h2 class="text-center">Youth Ministry</h2>
+      <h5 class="text-center">Ecclesiastes 11:9</h5>
+      <p class="text-center">You who are young, be happy while you are young, and let your heart give you joy in the days of your youth. <br> Follow the ways of your heart
+        and whatever your eyes see, but know that for all these things <br> God will bring you into judgment.</p>
+      <div class="row">
+          {% for youth in youths%}
+          <div class="col-md-6 pt-3 mb-3">
+              <h4 class="text-center" style="padding-top: 10%;">{{ youth.title }}</h4>
+              <p class="text-center"> {{youth.description }}</p>
+          </div>
+          <div class="col-md-6 pt-3 mb-3">
+              <img width="100%" src="{{ youth.image.url }}" alt="">
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+
+
+
 
 
 <!-- Footer -->
