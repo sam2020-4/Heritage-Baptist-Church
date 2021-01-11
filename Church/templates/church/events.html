@@ -1,0 +1,107 @@
+{% include 'church/base.html'%}
+
+{% block content %}
+
+        <!-- Background image -->
+        <div
+          class="p-5 text-center bg-image"
+          style="background-image: url('../../../collections/bible.jpg'); height: 400px;">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white">
+                <h2 class="mb-3 text-titlecase">View our comming events</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Background image -->
+        
+<div class="container text-center pt-3 ">
+    <div class="container-fluid">
+        <h2 class="text-titlecase">Events</h2>        
+    </div>
+    <div class="row">  
+      {% for event in events %}
+      <div class="col-md-4 pt-4 mb-3">
+        <div class="card">
+          <img src="{{ event.image.url }}" class="card-img-top" alt="..."/>
+          <div class="card-body">
+            <h5 class="card-title">{{event.title}}</h5> 
+            <p class="card-title">{{event.pub_date}}</p>
+            <p class="card-title">{{event.venue}}</p>
+            <p class="card-text">{{event.description}}</p>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <h2>No Events for now</h2>
+      {% endfor %}
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="page-footer text-white font-small unique-color-dark pt-1" style="background-color: rgb(78, 74, 74);">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-6">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-5 col-lg-5 col-xl-5  mx-auto mb-1">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold text-white">Heritage Baptism Church</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet porttitor elit, quis gravida neque. .</p>
+
+      </div>
+       
+      <!-- Grid column -->
+      <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-md-0 mb-2">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold text-white">Location</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> Along Langata Southern Bypass</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i>P.o Box 900 - 00100, Nairoobi - Kenya</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> sample@gmail.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 254 700 000 000</p>          
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-2">  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold text-white">Follow us</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+              <i class="fab fa-twitter mr-3"></i>Twitter</p>
+          <p>
+              <i class="fab fa-facebook mr-3"></i>Facebook</p>
+          <p>
+              <i class="fab fa-youtube mr-3"></i>Youtube</p>                
+        </div>
+        <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->  
+</footer>
+<!-- footer -->
+<div class="container-fluid"  style="background-color: rgb(116, 90, 90);">   
+  <footer class="page-footer font-small downfoo">
+      <div class="footer-copyright text-center text-center py-3">© 2020 Copyright | <a href="#" class="text-white">Heritage Baptism Church |  Terms & conditions | Privacy Policy</a>
+      </div>
+  </footer>
+</div>
+{% endblock content %}
+   

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Team, Sermon, Children, Youth
+from .models import Team, Sermon, Children, Youth, Event
 
 # Create your views here.
 def about(request):
@@ -23,3 +23,7 @@ def children(request):
 def youth(request):
     youths = Youth.objects.all()
     return render(request, 'church/youth.html', {'youths': youths})
+
+def events(request):
+    events = Event.objects.all()
+    return render(request,'church/events.html', {'events': events})

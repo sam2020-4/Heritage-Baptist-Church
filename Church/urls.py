@@ -11,6 +11,7 @@ urlpatterns = [
     path('give/',views.give, name='give'), 
     path('children/',views.children, name='children'),
     path('youth/',views.youth, name='youth'),
+    path('events/', views.events, name='events')
 ]
 
 if settings.DEBUG:urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
